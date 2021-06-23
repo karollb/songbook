@@ -1,12 +1,14 @@
 package pl.edu.wszib.songbook;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import pl.edu.wszib.songbook.permissions.StoragePermission;
 
@@ -18,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         StoragePermission.checkPermission(MainActivity.this, MainActivity.this);
+
+        Button songbookButton = findViewById(R.id.songbookButton);
+        songbookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
 
 
     }

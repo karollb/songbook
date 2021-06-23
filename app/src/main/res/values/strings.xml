@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SongBook</string>
+    <string name="songbook">Spiewnik</string>
 </resources>
