@@ -71,7 +71,7 @@ public class SongActivity extends AppCompatActivity {
         target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         try {
             startActivity(Intent.createChooser(target, "Open File"));
-        } catch (ActivityNotFoundException e) {
+        } catch (ActivityNotFoundException ignored) {
 
         }
 
