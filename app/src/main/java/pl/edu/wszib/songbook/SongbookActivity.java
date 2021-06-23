@@ -39,6 +39,19 @@ public class SongbookActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.files_list_view);
         listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            if (arrayAdapter.getItem(position).endsWith(".pdf")) {
+                Intent i = new Intent(SongbookActivity.this, SongActivity.class);
+                i.putExtra(SongActivity.EXTRA_MESSAGE, intent.getStringExtra(SongbookActivity.EXTRA_MESSAGE) + "/" + arrayAdapter.getItem(position));
+                startActivity(i);
+            } else {
+                Intent i2 = new Intent(SongbookActivity.this, SongbookActivity.class);
+                i2.putExtra(SongbookActivity.EXTRA_MESSAGE, intent.getStringExtra(SongbookActivity.EXTRA_MESSAGE) + "/" + arrayAdapter.getItem(position));
+                startActivity(i2);
+
+            }
+
+        });
     }
 
     @Override
