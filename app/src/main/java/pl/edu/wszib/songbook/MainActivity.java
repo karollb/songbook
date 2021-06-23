@@ -1,9 +1,9 @@
 package pl.edu.wszib.songbook;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         StoragePermission.checkPermission(MainActivity.this, MainActivity.this);
 
         Button songbookButton = findViewById(R.id.songbookButton);
-        songbookButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
+        songbookButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SongbookActivity.class);
+            intent.putExtra(SongbookActivity.EXTRA_MESSAGE, path);
+            startActivity(intent);
         });
 
 

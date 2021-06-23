@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SongBook</string>
     <string name="songbook">Spiewnik</string>
+    <string name="edit">Edit</string>
+    <string name="refresh">Refresh</string>
+    <string name="search">Search</string>
 </resources>
