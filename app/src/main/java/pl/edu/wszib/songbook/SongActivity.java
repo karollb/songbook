@@ -82,7 +82,7 @@ public class SongActivity extends AppCompatActivity {
         try {
             startActivity(intent);
         } catch (ActivityNotFoundException e) {
-            Toast.makeText(SongActivity.this, "You have to install a Pdf editor", Toast.LENGTH_SHORT);
+            Toast.makeText(SongActivity.this, "You have to install a Pdf editor", Toast.LENGTH_SHORT).show();
         }
 
     }
