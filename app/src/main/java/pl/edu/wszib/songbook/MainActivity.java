@@ -13,7 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import pl.edu.wszib.songbook.permissions.StoragePermission;
 
 public class MainActivity extends AppCompatActivity {
-    private final String path = Environment.getExternalStorageDirectory().toString() + "/Spiewnik";
+    private final String path = Environment.getExternalStorageDirectory().getPath() + "/Spiewnik";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(SongbookActivity.EXTRA_MESSAGE, path);
             startActivity(intent);
         });
-
-
+        
     }
 
     @Override
@@ -41,4 +41,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Storage Permission Denaided", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
